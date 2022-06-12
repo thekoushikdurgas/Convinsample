@@ -33,7 +33,9 @@ function App() {
     if (render) {
       const fetchData = async () => {
         if (userno === 0) {
-          await getusersno();
+          setTimeout(async () => {
+            await getusersno();
+          }, 2000);
         } else {
           setrender(false);
         }
